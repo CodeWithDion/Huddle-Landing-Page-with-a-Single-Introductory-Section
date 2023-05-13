@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* ||RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ||VARIABLES */
+:root {
+    /* Primary Color */
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+/* ||GENERAL STYLES */
+body {
+    min-height: 100vh;
+    background-color: var(--Violet);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    padding: 0 4.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.16rem;
+}
+
+/* HEADER */
+header {
+    padding: 3.5rem 0;
+}
+
+header img {
+    width: 13.5rem;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+section .intro {
+    margin-left: 3rem;
+    margin-top: -9rem;
+}
+
+.intro a {
+    text-decoration: none;
+    background: white;
+    padding: .7rem 4rem;
+    border-radius: 5rem;
+    margin-top: 5rem;
+    font-size: 1.16rem;
+    box-shadow: 0 3px 10px black;
+    color: var(--Violet);
+}
+
+.intro a:hover {
+    background: var(--Soft-Magenta);
+    color: white;
+}
+
+footer {
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+footer .fb,
+footer .twitter {
+    margin-right: 1rem;
+}
+
+footer i {
+    border: 1.5px solid white;
+    padding: .5rem;
+    border-radius: 50%;
+    color: white;
+}
+
+footer i:hover {
+    border: 1.5px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+
+/* ||MEDIA QUERIES */
+@media only screen and (max-width: 1150px) {
+    section {
+        display: block;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    section .intro {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    h1 {
+        margin-top: 5rem;
+    }
+
+    p {
+        margin-bottom: 3rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+        padding: 0 2.5rem;
+    }
+
+    header {
+        padding: 2rem 0;
+    }
+
+    header img {
+        width: 8rem;
+    }
+
+    section .intro {
+        margin-top: -2.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: .97rem;
+    }
+
+    .intro a {
+        font-size: .97rem;
+        padding: .7rem 4.5rem;
+    }
+}
